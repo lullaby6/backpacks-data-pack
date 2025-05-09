@@ -11,6 +11,8 @@
 
 Very simple backpacks! use your first inventory slots to store items in a backpack!
 
+When you Right-Click on the backpack, you open it and the first line of slots in the inventory are from the backpack, you can store your items there, then you Right-Click on the backpack again and it closes and you get your normal inventory back.
+
 No command is executed per tick, it's the best performing backpacks data-pack ever!
 
 ## 🛠️ Recipe
