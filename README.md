@@ -9,6 +9,10 @@
 [![Repo Size](https://img.shields.io/github/repo-size/lullaby6/backpacks-data-pack?logo=dropbox&color=red)](https://github.com/lullaby6/backpacks-data-pack)
 [![Stars](https://img.shields.io/github/stars/lullaby6/backpacks-data-pack?logo=github&color=yellow)](https://github.com/lullaby6/backpacks-data-pack/stargazers)
 
+Very simple backpacks! use your first inventory slots to store items in a backpack!
+
+No command is executed per tick, it's the best performing backpacks data-pack ever!
+
 ## 🛠️ Recipe
 
 ![Recipe](https://raw.githubusercontent.com/lullaby6/backpacks-data-pack/refs/heads/main/images/recipe.png)
