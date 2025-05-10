@@ -114,17 +114,8 @@
                     }
                   ]
                 },
-                "minecraft:custom_name": {
-                  "text": "Backpack",
-                  "italic": false
-                },
-                "minecraft:lore": [
-                  {
-                    "text": "Closed",
-                    "color": "gray",
-                    "italic": false
-                  }
-                ],
+                "minecraft:custom_name": "{\"text\": \"Backpack\",\"italic\": false}",
+                "minecraft:lore": ["{\"text\": \"Closed\",\"color\": \"gray\",\"italic\": false}"],
                 "minecraft:profile": {
                   "id": [
                     -1378723443,
@@ -143,11 +134,6 @@
                   "consume_seconds": 999999,
                   "animation": "none",
                   "has_consume_particles": false
-                },
-                "minecraft:tooltip_display": {
-                  "hidden_components": [
-                    "attribute_modifiers"
-                  ]
                 },
                 "minecraft:max_stack_size": 1
               }
