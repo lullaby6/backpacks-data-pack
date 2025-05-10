@@ -15,7 +15,7 @@
         "count": 1,
         "components": {
                 "minecraft:rarity": "common",
-                "minecraft:item_model": "minecraft:player_head",
+                "minecraft:item_model": "minecraft:bundle",
                 "minecraft:custom_data": {
                   "backpacks.backpack": true,
                   "backpacks.backpack.open": false,
@@ -116,20 +116,6 @@
                 },
                 "minecraft:custom_name": "{\"text\": \"Backpack\",\"italic\": false}",
                 "minecraft:lore": ["{\"text\": \"Closed\",\"color\": \"gray\",\"italic\": false}"],
-                "minecraft:profile": {
-                  "id": [
-                    -1378723443,
-                    16860374,
-                    -1385993333,
-                    -1763905967
-                  ],
-                  "properties": [
-                    {
-                      "name": "textures",
-                      "value": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM1MWU1MDU5ODk4MzhlMjcyODdlN2FmYmM3Zjk3ZTc5NmNhYjVmMzU5OGE3NjE2MGMxMzFjOTQwZDBjNSJ9fX0="
-                    }
-                  ]
-                },
                 "minecraft:consumable": {
                   "consume_seconds": 999999,
                   "animation": "none",
