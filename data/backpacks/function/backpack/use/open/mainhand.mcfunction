@@ -1,3 +1,6 @@
+execute unless function backpacks:backpack/use/open/check/shulker_box run return run function backpacks:backpack/use/open/cancel/shulker_box
+execute unless function backpacks:backpack/use/open/check/backpack run return run function backpacks:backpack/use/open/cancel/backpack
+
 playsound minecraft:item.bundle.insert master @a ~ ~ ~ 1 1
 
 item modify entity @s weapon.mainhand backpacks:closed/data
