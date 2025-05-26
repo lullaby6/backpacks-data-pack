@@ -4,5 +4,5 @@ execute if entity @s[nbt={active_effects:[{id:"minecraft:mining_fatigue"}]}] run
 
 effect give @s minecraft:mining_fatigue 1 0 true
 
-execute if predicate backpacks:backpack/mainhand run return run function backpacks:backpack/use/mainhand
-execute if predicate backpacks:backpack/offhand run return run function backpacks:backpack/use/offhand
+execute if predicate backpacks:backpack/mainhand run return run function backpacks:backpack/use/hand {"hand":"mainhand","data":"SelectedItem"}
+execute if predicate backpacks:backpack/offhand run return run function backpacks:backpack/use/hand {"hand":"offhand","data":"Inventory[{Slot:-106b}]"}
