@@ -1,13 +1,13 @@
-execute unless function backpacks:backpack/use/open/check run return run function backpacks:backpack/use/open/cancel
+execute if predicate backpacks:backpack/can_not_close run return run function backpacks:backpack/use/cancel
 
 playsound minecraft:item.bundle.insert master @a ~ ~ ~ 1 1
 
-item modify entity @s weapon.mainhand backpacks:closed/data
-item modify entity @s weapon.mainhand backpacks:closed/lore
+$item modify entity @s weapon.$(hand) backpacks:closed/data
+$item modify entity @s weapon.$(hand) backpacks:closed/lore
 
 summon armor_stand ~ ~ ~ {Tags:["backpacks.armor_stand"],ShowArms:1b,NoGravity:1b,Silent:1b,Invulnerable:1b,HasVisualFire:0b,Small:1b,Invisible:1b,PersistenceRequired:1b,DisabledSlots:4144959}
 
-item replace entity @n[tag=backpacks.armor_stand] weapon.mainhand from entity @s weapon.mainhand
+$item replace entity @n[tag=backpacks.armor_stand] weapon.mainhand from entity @s weapon.$(hand)
 
 data modify entity @n[tag=backpacks.armor_stand] HandItems[0].components."minecraft:custom_data"."backpacks.backpack.storage"[{Slot:9b}] set from entity @s Inventory[{Slot:9b}]
 execute unless data entity @s Inventory[{Slot:9b}] run data modify entity @n[tag=backpacks.armor_stand] HandItems[0].components."minecraft:custom_data"."backpacks.backpack.storage"[{Slot:9b}] set value {"Slot":9b,"count":0,"id":"minecraft:air"}
@@ -36,35 +36,36 @@ execute unless data entity @s Inventory[{Slot:16b}] run data modify entity @n[ta
 data modify entity @n[tag=backpacks.armor_stand] HandItems[0].components."minecraft:custom_data"."backpacks.backpack.storage"[{Slot:17b}] set from entity @s Inventory[{Slot:17b}]
 execute unless data entity @s Inventory[{Slot:17b}] run data modify entity @n[tag=backpacks.armor_stand] HandItems[0].components."minecraft:custom_data"."backpacks.backpack.storage"[{Slot:17b}] set value {"Slot":17b,"count":0,"id":"minecraft:air"}
 
-item replace entity @s weapon.mainhand from entity @n[tag=backpacks.armor_stand] weapon.mainhand
+$item replace entity @s weapon.$(hand) from entity @n[tag=backpacks.armor_stand] weapon.mainhand
 
 item replace entity @n[tag=backpacks.armor_stand] weapon.mainhand with air
+data remove entity @n[tag=backpacks.armor_stand] HandItems[0]
 
-data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s SelectedItem.components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:9b}]
+$data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s $(data).components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:9b}]
 item replace entity @s container.9 from entity @n[tag=backpacks.armor_stand] weapon.mainhand
 
-data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s SelectedItem.components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:10b}]
+$data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s $(data).components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:10b}]
 item replace entity @s container.10 from entity @n[tag=backpacks.armor_stand] weapon.mainhand
 
-data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s SelectedItem.components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:11b}]
+$data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s $(data).components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:11b}]
 item replace entity @s container.11 from entity @n[tag=backpacks.armor_stand] weapon.mainhand
 
-data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s SelectedItem.components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:12b}]
+$data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s $(data).components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:12b}]
 item replace entity @s container.12 from entity @n[tag=backpacks.armor_stand] weapon.mainhand
 
-data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s SelectedItem.components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:13b}]
+$data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s $(data).components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:13b}]
 item replace entity @s container.13 from entity @n[tag=backpacks.armor_stand] weapon.mainhand
 
-data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s SelectedItem.components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:14b}]
+$data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s $(data).components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:14b}]
 item replace entity @s container.14 from entity @n[tag=backpacks.armor_stand] weapon.mainhand
 
-data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s SelectedItem.components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:15b}]
+$data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s $(data).components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:15b}]
 item replace entity @s container.15 from entity @n[tag=backpacks.armor_stand] weapon.mainhand
 
-data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s SelectedItem.components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:16b}]
+$data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s $(data).components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:16b}]
 item replace entity @s container.16 from entity @n[tag=backpacks.armor_stand] weapon.mainhand
 
-data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s SelectedItem.components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:17b}]
+$data modify entity @n[tag=backpacks.armor_stand] HandItems[0] set from entity @s $(data).components."minecraft:custom_data"."backpacks.backpack.inventory"[{Slot:17b}]
 item replace entity @s container.17 from entity @n[tag=backpacks.armor_stand] weapon.mainhand
 
 kill @n[tag=backpacks.armor_stand]
